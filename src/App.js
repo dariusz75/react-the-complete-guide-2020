@@ -7,7 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi I'm React App</h1>
-        <Person></Person>
+        <Person name="Max" age="20"></Person>
+        <Person name="John" age="30"></Person>
+        <Person name="George" age="40"></Person>
       </div>
     );
   }
