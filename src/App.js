@@ -18,9 +18,9 @@ class App extends Component {
     // do this
     this.setState({
       persons: [
-        { name: 'Jan', age: 32 },
-        { name: 'Shane', age: 42 },
-        { name: 'Maximilian', age: 52 }
+        { name: 'Jan', age: 22 },
+        { name: 'George', age: 32 },
+        { name: 'Maximilian', age: 42 }
       ]
     });
   }
@@ -30,9 +30,20 @@ class App extends Component {
     return (
       <div className="App">
         <button onClick={this.switchNameHandler}>Switch name</button>
-        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}></Person>
-        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}></Person>
-        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}>And my hobby is music.</Person>
+        <Person
+          name={this.state.persons[0].name}
+          age={this.state.persons[0].age} >
+        </Person>
+        <Person
+          name={this.state.persons[1].name}
+          age={this.state.persons[1].age} >
+        </Person>
+        <Person
+          name={this.state.persons[2].name}
+          age={this.state.persons[2].age}
+          clickExample={this.switchNameHandler}>
+          Click on the paragraph above.
+        </Person>
       </div>
     );
   }
