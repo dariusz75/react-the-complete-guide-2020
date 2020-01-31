@@ -9,7 +9,6 @@ class App extends Component {
     age: 22
   }
 
-
   nameChangedHandler = (event) => {
     this.setState({
       name: event.target.value,
@@ -18,8 +17,15 @@ class App extends Component {
   }
 
   render() {
+
+    const headingStyles = {
+      backgroundColor: 'red',
+      color: '#fff'
+    };
+
     return (
       <div className="App">
+        <h2 style={headingStyles}>Inline styling example</h2>
         <Person
           name={this.state.name}
           age={this.state.age}
